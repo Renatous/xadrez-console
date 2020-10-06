@@ -12,7 +12,7 @@ namespace xadrez_console
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                while (!partida.termida)
+                while (!partida.terminada)
                 {
 
                     try
