@@ -35,7 +35,7 @@ namespace xadrez_console.xadrez
                 {
                     break;
                 }
-                pos.linha -= 1;
+                pos.definirValores(pos.linha - 1, pos.coluna + 1);
             }
 
             //sudeste
@@ -47,10 +47,10 @@ namespace xadrez_console.xadrez
                 {
                     break;
                 }
-                pos.coluna += 1;
+                pos.definirValores(pos.linha + 1, pos.coluna + 1);
             }
 
-            //sudueste
+            //sudoeste
             pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -59,7 +59,7 @@ namespace xadrez_console.xadrez
                 {
                     break;
                 }
-                pos.linha += 1;
+                pos.definirValores(pos.linha + 1, pos.coluna - 1);
             }
 
             //noroeste
@@ -71,7 +71,7 @@ namespace xadrez_console.xadrez
                 {
                     break;
                 }
-                pos.coluna -= 1;
+                pos.definirValores(pos.linha - 1, pos.coluna - 1);
             }
 
             return mat;
